@@ -1,1 +1,3 @@
 #一些软件的配置
+
+>javascript_format.xml为eclipse中js代码格式化的配置文件
