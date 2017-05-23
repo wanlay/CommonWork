@@ -33,3 +33,11 @@ sudo fuser -n tcp 8182  ##查看端口
 ##或者
 netstat -aon|findstr "8080"
 ```
+## 查看服务
+```shell
+sudo service --status-all   #所有服务
+sudo netstat -ap | grep 8080   #端口
+ps –ef | grep ..   #端口
+sudo update-rc.d -f apache2 remove  #删除启动项
+sudo update-rc.d   apache2 defaults #添加
+```
