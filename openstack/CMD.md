@@ -14,6 +14,11 @@ setenforce 0                  ##设置SELinux 成为permissive模式
 修改`/etc/selinux/config`文件，
 将`SELINUX=enforcing`改为`SELINUX=disabled`
 
+```shell
+sudo setenforce 0
+sudo sed -i 's/enforcing/disabled/g' /etc/selinux/config
+```
+
 ## 建立stack免密用户
 ```shell
 sudo useradd -s /bin/bash -d /opt/stack -m stack    ##stack用户目录为/opt/stack
