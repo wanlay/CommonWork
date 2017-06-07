@@ -14,7 +14,8 @@ sudo apt-get install uget
 <b>x11vnc -storepasswd</b>
 设为开机启动
 <b>sudo nano /lib/systemd/system/x11vnc.service</b>
-<b>[Unit]
+<b>
+[Unit]
 Description=Start x11vnc at startup.
 After=multi-user.target
 
