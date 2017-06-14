@@ -46,3 +46,18 @@ ps –ef | grep ..   #端口
 sudo update-rc.d -f apache2 remove  #删除启动项
 sudo update-rc.d   apache2 defaults #添加
 ```
+## screen 常用用法
+```shell
+screen -li   #查看当前用户运行的screen实例
+screen -X -S <pid> quit #删除指定screen实例
+
+ctrl + a + p  #同一窗口中，上一个实例
+ctrl + a + n  #下一个实例
+
+ctrl + a + [  #进入编辑模式
+ctrl + a + ]  #退出编辑模式
+```
+## 开放端口
+```shell
+iptables -I INPUT -p tcp --dport 3306 -j ACCEPT
+```

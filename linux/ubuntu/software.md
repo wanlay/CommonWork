@@ -9,7 +9,7 @@ sudo apt-get install uget
 <pre>
 安装x11vnc
 <b>sudo apt-get update</b>
-<b>sudo apt-get install x11vnc</b>
+<b>sudo apt-get install -y x11vnc</b>
 生成密码
 <b>x11vnc -storepasswd</b>
 设为开机启动
