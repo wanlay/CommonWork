@@ -61,3 +61,13 @@ ctrl + a + ]  #退出编辑模式
 ```shell
 iptables -I INPUT -p tcp --dport 3306 -j ACCEPT
 ```
+## 设置root用户远程登录
+```shell
+#设置密码
+sudo passwd root
+#/etc/ssh/sshd_config文件中改为如下
+# Authentication:
+LoginGraceTime 120
+PermitRootLogin yes  #yes
+StrictModes yes
+```
