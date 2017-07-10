@@ -1,9 +1,8 @@
 ## 在 ubuntu 上安装 rancher
-<pre>
-安装docker和docker-compose
-<b>参考install.md</b>
-通过docker-compose安装rancher-server和mysql
-<b>
+### 安装docker和docker-compose
+参考install.md
+### 通过docker-compose安装rancher-server和mysql
+```yaml
 version: '2'
 services:
   mysqldb:
@@ -32,10 +31,11 @@ services:
       - db-user=rancher
       - db-pass=rancher
       - db-name=rancher
-      - advertise-address=10.190.23.245</b>
-运行
-<b>docker-compose up -d</b>
-</pre>
+      - advertise-address=10.190.23.245   
+```   
+### 运行
+`docker-compose up -d`
+
 
 ## tips
 添加主机时，agent所在的主机的docker版本要与server端的一样

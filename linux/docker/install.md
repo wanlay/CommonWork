@@ -15,6 +15,7 @@ sudo curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://165
 sudo systemctl restart docker.service
 ```
 ```
+# /etc/docker/daemon.json
 https://01cg06cz.mirror.aliyuncs.com
 ```
 
