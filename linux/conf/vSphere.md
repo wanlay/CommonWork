@@ -3,7 +3,7 @@
 使用文本编辑器打开 `/etc/vmware/config` 文件。
 将以下条目添加到文件中：
 
-```shell
+```conf
 vmx.fullpath = "/bin/vmx"
 isolation.tools.copy.disable="FALSE"
 isolation.tools.paste.disable="FALSE"
