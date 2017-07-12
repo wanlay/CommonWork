@@ -17,6 +17,7 @@ sudo systemctl restart docker.service
 ```
 # /etc/docker/daemon.json
 https://01cg06cz.mirror.aliyuncs.com
+https://docker.mirrors.ustc.edu.cn/
 ```
 
 </ul><ul>

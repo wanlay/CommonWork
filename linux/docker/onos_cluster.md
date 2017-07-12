@@ -1,40 +1,49 @@
-
-<pre>
-安装docker
+>安装docker  
 配置加速器
-下载onosproject/onos镜像
-<b>docker pull onosproject/onos</b>
+
+## 下载onosproject/onos镜像
+docker pull onosproject/onos
 将onos代码打包（onos-package）tar.gz 格式
 解压，进入目录编写Dockerfile
-<b>FROM onosproject/onos:latest
+```dockerfile
+FROM java:8-jre-alpine
 MAINTAINER wanlay
 
-# Change to /root directory
-WORKDIR /root
-
-# Copy in the source
-RUN rm -rf onos/ && \ 
-    mkdir onos
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories && \
+    apk update && apk add --no-cache bash
 
 COPY . /root/onos/
 
 EXPOSE 6653 6640 8181 8101 9876
 
 WORKDIR /root/onos
-ENTRYPOINT ["./bin/onos-service"]</b>
-制作docker镜像
-<b>sudo docker build -t wanlay/cbb .</b>
+
+CMD ["./bin/onos-service"]
+```
+## 制作docker镜像
+sudo docker build -t wanlay/cbb .
 下载onos-form-cluster
-<b>wget https://raw.githubusercontent.com/opennetworkinglab/onos/master/tools/package/bin/onos-form-cluster 
-chmod u+x onos-form-cluster</b>
+```bash
+wget https://raw.githubusercontent.com/opennetworkinglab/onos/master/tools/package/bin/onos-form-cluster 
+
+chmod u+x onos-form-cluster
+```
 将下面代码加入.bashrc
-<b>docker-ip() {
+```sh
+docker-ip() {
   sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
-}</b>
-运行onos镜像
-<b>sudo docker run  -t -d --name cbb1 wanlay/cbb</b>
+}
+```
+## 运行onos镜像
+```
+sudo docker run  -t -d --name cbb1 wanlay/cbb
+```
 将多个onos实例形成集群
-<b>./onos-form-cluster -u onos -p rocks `docker-ip cbb1` `docker-ip cbb2` `docker-ip cbb3`</b>
+```sh
+./onos-form-cluster -u onos -p rocks `docker-ip cbb1` `docker-ip cbb2` `docker-ip cbb3`
+```
 ssh连接到onos命令行
-<b>ssh -p 8101 onos@`docker-ip cbb1`  #密码是rocks</b>
-</pre>
+```sh
+ssh -p 8101 onos@`docker-ip cbb1`  
+#密码是rocks
+```
