@@ -27,9 +27,15 @@ server {
 }
 ```
 ## 安装Node.js
+
+curl -sL https://rpm.nodesource.com/setup | bash -
+
+
 通过nvm安装nodejs
 ```shell
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash  
+（.bashrc中添加）
+export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
 source .bashrc  
 nvm ls  
 nvm install 4.2

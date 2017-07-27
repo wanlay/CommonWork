@@ -71,3 +71,5 @@ LoginGraceTime 120
 PermitRootLogin yes  #yes
 StrictModes yes
 ```
+
+mvn de.evosec:export-dependencies-maven-plugin:buck

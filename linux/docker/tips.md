@@ -37,7 +37,7 @@ Q:
 http: server gave HTTP response to HTTPS client  
 A:  
 ```shell
-sudo echo '{ "insecure-registries":["192.168.80.130:5000"] }' > /etc/docker/daemon.json
+sudo echo '{ "insecure-registries":["10.190.23.246:8088"] }' > /etc/docker/daemon.json
 sudo systemctl restart docker
 
 ```
@@ -49,4 +49,13 @@ RUN echo "Asia/shanghai" > /etc/timezone;
 ## docker中限制jvm
 ```dockerfile
 ENV JAVA_OPTS="-Xmx512m
+```
+
+## swarm问题
+```
+Error response from daemon: context deadline exceeded
+```
+```
+sudo rm -rf var/lib/docker/swarm/*
+sudo systemctl restart docker
 ```
