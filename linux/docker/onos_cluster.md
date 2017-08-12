@@ -10,9 +10,13 @@ FROM java:8-jre-alpine
 MAINTAINER wanlay
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories && \
-    apk update && apk add --no-cache bash
+    apk update && apk add --no-cache bash curl openssh
 
 COPY . /root/onos/
+
+RUN   mkdir -p /root/onos/apache-karaf-3.0.5/data/log && \
+touch /root/onos/apache-karaf-3.0.5/data/log/karaf.log && \
+ln -sf /dev/stdout /root/onos/apache-karaf-3.0.5/data/log/karaf.log
 
 EXPOSE 6653 6640 8181 8101 9876
 
