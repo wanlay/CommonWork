@@ -1,6 +1,6 @@
 ## 在 ubuntu 上安装 rancher
 ### 安装docker和docker-compose
-参考install.md
+参考[install.md](install.md)
 ### 通过docker-compose安装rancher-server和mysql
 ```yaml
 version: '2'
