@@ -59,3 +59,46 @@ log4j.appender.logstash=org.apache.log4j.net.SocketAppender
 log4j.appender.logstash.port=5044
 log4j.appender.logstash.remoteHost=10.190.23.244  
 ```
+
+## filebeat输出到elk
+### filebeat Dockerfile
+Dockerfile
+```yaml
+From prima/filebeat
+ADD filebeat.yml /filebeat.yml
+RUN chmod go-w /filebeat.yml
+```
+
+### filebeat.yml
+```yaml
+filebeat:
+    prospectors:
+        -
+            paths:
+                - "/var/onos/log/*.log"
+output:
+    elasticsearch:
+        hosts: ["10.190.23.244:9200"]
+```
+
+### docker-compose
+```yaml
+version: '2'  
+services:  
+     cbb:  
+       image: cbb
+       volumes:  
+        - cbb-volume:/root/onos/apache-karaf-3.0.5/data/log/
+     filebeat:
+       image: olinicola/filebeat:1.2.3
+       volumes:  
+        - cbb-volume:/var/onos/log/
+        - ./filebeat.yml:/etc/filebeat/filebeat.yml
+       depends_on:
+        - cbb
+volumes:
+     cbb-volume:
+
+```
+
+

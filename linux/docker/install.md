@@ -2,6 +2,8 @@
 
 ```shell  
 sudo curl -sSL https://get.daocloud.io/docker | sh
+
+curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet | sh -
 #安装Docker-compose
 (root) curl -L https://get.daocloud.io/docker/compose/releases/download/1.14.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
