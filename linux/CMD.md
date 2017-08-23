@@ -1,4 +1,4 @@
-# 常用的cmd
+# 常用的cmd  
 ## 设置ssh免密登录
 user `ssh` 到root，免密
 ```shell
@@ -71,5 +71,28 @@ LoginGraceTime 120
 PermitRootLogin yes  #yes
 StrictModes yes
 ```
-
-mvn de.evosec:export-dependencies-maven-plugin:buck
+## popd 和 pushd
+pushd和popd是对一个目录栈进行操作
+```
+ubuntu@ubuntu:~$ pushd /tmp/
+/tmp ~
+ubuntu@ubuntu:/tmp$ popd
+~
+ubuntu@ubuntu:~$ pushd /home/ubuntu/Downloads/
+~/Downloads ~
+ubuntu@ubuntu:~/Downloads$ pushd /home/ubuntu/Documents/
+~/Documents ~/Downloads ~
+ubuntu@ubuntu:~/Documents$ pushd -2
+~/Documents ~/Downloads ~
+ubuntu@ubuntu:~/Documents$ pushd +2
+~ ~/Documents ~/Downloads
+ubuntu@ubuntu:~$ pushd +1
+~/Documents ~/Downloads ~
+ubuntu@ubuntu:~/Documents$ pushd -h
+bash: pushd: -h: invalid number
+pushd: usage: pushd [-n] [+N | -N | dir]
+ubuntu@ubuntu:~/Documents$ popd 
+~/Downloads ~
+ubuntu@ubuntu:~/Downloads$ popd 
+~
+```
