@@ -14,10 +14,11 @@ docker-compose.yml
 version: '2'  
 services:  
      elk:  
-       image: sebp/elk
+       image: sebp/elk:520
        volumes:  
         - elk-volume:/var/lib/elasticsearch
-                        
+        #映射目录
+        - ./karaf.conf:/etc/logstash/conf.d/karaf.conf             
        ports:  
         - "5044:5044" 
         - "5601:5601" 

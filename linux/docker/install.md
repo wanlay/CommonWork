@@ -42,3 +42,7 @@ curl -L https://github.com/docker/machine/releases/download/v0.12.2/docker-machi
     chmod +x /tmp/docker-machine &&
     sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
 ```
+
+
+## k8s
+http://dockone.io/article/2501 
