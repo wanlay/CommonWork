@@ -18,7 +18,12 @@ sudo pkill -KILL appstreamcli
 wget -P /tmp https://launchpad.net/ubuntu/+archive/primary/+files/appstream_0.9.4-1ubuntu1_amd64.deb https://launchpad.net/ubuntu/+archive/primary/+files/libappstream3_0.9.4-1ubuntu1_amd64.deb
 sudo dpkg -i /tmp/appstream_0.9.4-1ubuntu1_amd64.deb /tmp/libappstream3_0.9.4-1ubuntu1_amd64.deb
 ```
-
+### dns
+```shell
+/etc/resovlconf/resolv.conf.d/tail
+nameserver 10.19.8.15
+/etc/init.d/resolvconf restart
+```
 
 route add -net 10.18.3.0/24 gw 10.18.1.2 dev enp3s0f0
 10.18.3.0 为设备所在的网段 

@@ -9,3 +9,6 @@ isolation.tools.copy.disable="FALSE"
 isolation.tools.paste.disable="FALSE"
 
 ```
+
+ESXi开启cpu虚拟机
+安装vcenter，通过vSphere web client访问，虚拟机，编辑配置，点开CPU，将“硬件虚拟化”里的“向客户机操作系统公开硬件辅助的虚拟机”勾上就行。

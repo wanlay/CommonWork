@@ -40,7 +40,7 @@ sudo systemctl start x11vnc.service
 ```
 sudo add-apt-repository ppa:hzwhuang/ss-qt5
 sudo apt-get update
-sudo apt-get install shadowsocks-qt5
+sudo apt-get install -y shadowsocks-qt5
 ```
 全局代理
 ```
@@ -51,3 +51,6 @@ sudo pip install genpac
 genpac -p "SOCKS5 127.0.0.1:1080" --gfwlist-proxy="SOCKS5 127.0.0.1:1080" --gfwlist-url=https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt --output="autoproxy.pac"
 ```
 系统点击System settings > Network > Network Proxy，选择 Method 为 Automatic，设置 Configuration URL 为 autoproxy.pac 文件的路径，点击 Apply System Wide。
+
+
+genpac -p "PROXY 127.0.0.1:1080" --gfwlist-proxy="PROXY 127.0.0.1:1080" --gfwlist-url=https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt --output="autoproxy.pac"

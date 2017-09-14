@@ -7,3 +7,4 @@ kubectl -n kube-system get po
 ```
 kubectl -n kube-system describe po
 ```
+
