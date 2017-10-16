@@ -1,0 +1,58 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nexus
+  namespace: default
+
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: nexus
+    spec:
+      containers:
+        - name: nexus
+          image: sonatype/nexus3:3.3.1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8081
+            - containerPort: 5000
+          volumeMounts:
+            - name: nexus-data
+              mountPath: /nexus-data
+          resources:
+            requests:
+              cpu: 440m
+              memory: 3.3Gi
+            limits:
+              cpu: 440m
+              memory: 3.3Gi
+      volumes:
+        - name: nexus-data
+#          azureFile:
+#            secretName: azure-file-storage-secret
+#            shareName: nexus-data
+
+#      readinessProbe:
+#        httpGet:
+#          path: /service/siesta/rest/v1/script
+#          port: 8081
+#          httpHeaders:
+#            - name: Authorization
+#              # The authorization token is simply the base64 encoding of the `healthprobe` user's credentials:
+#              # $ echo -n user:password | base64
+#              value: Basic dXNlcjpwYXNzd29yZA==
+#        initialDelaySeconds: 900
+#        timeoutSeconds: 60
+#      livenessProbe:
+#        httpGet:
+#          path: /service/siesta/rest/v1/script
+#          port: 8081
+#          httpHeaders:
+#            - name: Authorization
+#              value: Basic dXNlcjpwYXNzd29yZA==
+#        initialDelaySeconds: 900
+#        timeoutSeconds: 60

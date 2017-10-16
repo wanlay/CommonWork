@@ -14,3 +14,8 @@ sudo apt-get install oracle-java8-installer oracle-java8-set-default -y
 ```sh
 sudo apt-get install qemu-kvm qemu virt-manager virt-viewer libvirt-bin
 ```
+
+## 安装ping
+```
+sudo apt-get install inetutils-ping
+```

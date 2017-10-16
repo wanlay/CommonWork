@@ -30,7 +30,7 @@ server {
 
 curl -sL https://rpm.nodesource.com/setup | bash -
 
-
+curl -sL https://deb.nodesource.com/setup | bash -
 通过nvm安装nodejs
 ```shell
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash  

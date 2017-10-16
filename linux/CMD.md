@@ -96,3 +96,31 @@ ubuntu@ubuntu:~/Documents$ popd
 ubuntu@ubuntu:~/Downloads$ popd 
 ~
 ```
+
+## 清除buff/cache
+```
+sudo sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
+```
+
+## 定时命令
+```
+crontab
+```
+
+## 系统日志相关
+### 清空日志
+清空系统日志不使用`rm`，使用`cat /dev/null > /var/log/syslog `
+### 限制系统日志大小
+文件位于`/etc/logrotate.d/rsyslog`
+```s
+/var/log/testlog.log {
+    # 限制文件大小
+     size=100k
+    # 轮替
+     rotate 2
+    #重启syslogd服务，这样轮替后创建的新的日志文件才能被正常写入
+     postrotate
+                    /usr/bin/killall -HUP syslogd
+     endscript
+}
+```
