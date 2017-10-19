@@ -59,3 +59,5 @@ Error response from daemon: context deadline exceeded
 sudo rm -rf var/lib/docker/swarm/*
 sudo systemctl restart docker
 ```
+
+

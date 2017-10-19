@@ -34,6 +34,10 @@ sudo systemctl daemon-reload
 sudo systemctl enable x11vnc.service
 sudo systemctl start x11vnc.service
 ```
+手动软链接
+```
+ln -s /lib/systemd/system/x11vnc.service /etc/systemd/system/multi-user.target.wants/x11vnc.service
+```
 
 ## ss-qt5
 安装
