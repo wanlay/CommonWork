@@ -124,3 +124,33 @@ crontab
      endscript
 }
 ```
+
+
+### find
+```s
+#一个文件5556字节
+find /root -size -5557c -size +5555c -exec ls -ld {} \;
+#查找大于5555字节小于5557字节的文件，以上查找的是/root 目录
+#查找 小于500K，大于50K的文件
+find /root -size -500K -size +50K -exec ls -ld {} \;
+```
+```
+find /email/v2_bak -mtime +92 -type f -name *.mail[12] -exec rm -rf {} \;
+
+/email/v1_bak --设置查找的目录；
+-mtime +92 --设置时间为91天前；
+-type f --设置查找的类型为文件；
+-name *.mail[12] --设置文件名称中包含mail1或者mail2；
+-exec rm -f --查找完毕后执行删除操作；
+```
+
+## 筛选
+```s
+cat test | awk '{print $1}'  #输出第一行
+```
+
+## 字符串替换
+```s
+name=${i//\//-} 
+#将i中 //全局替换 \/ （i中的/）/- 替换为-
+```
