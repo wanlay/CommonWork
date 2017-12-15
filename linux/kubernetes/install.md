@@ -8,3 +8,9 @@ apt-get update
 ```
 apt-get install -y kubelet kubeadm kubectl kubernetes-cni
 ```
+
+
+## dashboard
+```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
+```
