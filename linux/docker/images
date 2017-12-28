@@ -1,0 +1,6 @@
+rancher/agent:v1.2.8
+rancher/scheduler:v0.8.3
+rancher/network-manager:v0.7.19
+rancher/lb-service-haproxy:v0.7.15
+rancher/k8s:v1.8.5-rancher3
+rancher/etcd:v2.3.7-13
