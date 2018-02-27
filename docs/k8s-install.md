@@ -1,4 +1,5 @@
 ## 安装
+文章http://dockone.io/article/2501 
 ```
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add
 echo deb http://mirrors.ustc.edu.cn/kubernetes/apt/ kubernetes-xenial main >> /etc/apt/sources.list.d/kubernetes.list
@@ -16,7 +17,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/s
 ```
 
 ## centos
-```sh
+```bash
  yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 
 
@@ -31,8 +32,8 @@ gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg
         https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
 EOF
 
-
-repomd.xml.asc  not found
+```
+若遇到`repomd.xml.asc  not found`，修改kubernetes.repo
+```
 repo_gpgcheck=1  ## =0
-
 ```

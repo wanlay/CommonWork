@@ -1,15 +1,15 @@
 ## ubuntu配置ssh免密钥
-```
-#本地生成公钥和私钥
+```bash
+# 本地生成公钥和私钥
 ssh-keygen
-#把生成的公钥发送到对方的主机上去
+# 把生成的公钥发送到对方的主机上去
 ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.1.160 
 ```
 ## centos配置ssh免密钥
 
 先进行上面两步，然后修改`/etc/ssh/sshd_config`
 将配置前#号去掉
-```sh
+```bash
 #禁用root账户登录，如果是用root用户登录请开启
 PermitRootLogin yes
 
@@ -31,4 +31,18 @@ PasswordAuthentication no
 重启服务
 ```
 service sshd start
+```
+
+## 设置root用户远程登录
+```bash
+#设置密码
+sudo passwd root
+```
+>/etc/ssh/sshd_config文件中改为如下
+
+```bash
+# Authentication:
+LoginGraceTime 120
+PermitRootLogin yes  #yes
+StrictModes yes
 ```

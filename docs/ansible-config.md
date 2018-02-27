@@ -1,7 +1,7 @@
 ## Host Key Checking
 known_hosts的问题
+> /etc/ansible/ansible.cfg 或者 ~/.ansible.cfg
 ```
-# /etc/ansible/ansible.cfg 或者 ~/.ansible.cfg
 [defaults]
 host_key_checking = False
 ```

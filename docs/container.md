@@ -1,15 +1,18 @@
-## elk的安装
-sebp/elk 的镜像
-
+## ELK
+使用sebp/elk镜像  
 运行时，日志报
-max virtual memory areas vm.max_map_count [65530] likely too low, increase to at least [262144]
-需增加宿主机的内存,至少需要2G
-```shell
-sudo sysctl -w vm.max_map_count=262144
-sysctl vm.max_map_count  #查看
 ```
+max virtual memory areas vm.max_map_count [65530] likely too low, increase to at least [262144]
+```
+需增加宿主机的内存,至少需要2G
+```bash
+# 设置
+sudo sysctl -w vm.max_map_count=262144
+# 查看
+sysctl vm.max_map_count
+```
+>docker-compose.yml  
 
-docker-compose.yml
 ```yaml
 version: '2'  
 services:  
@@ -28,7 +31,7 @@ volumes:
      elk-volume:
 ```
 
-## karaf日志输出到elk
+### karaf日志输出到elk
 删除容器目录/etc/logstash/conf.d/下的文件
 新建karaf.conf
 ```conf
@@ -50,7 +53,7 @@ output {
 }
 ```
 重启容器服务
-修改karaf的etc/org.ops4j.pax.logging.cfg (对应ONOS_ROOT/tools/package/etc)
+修改`karaf的etc/org.ops4j.pax.logging.cfg` (对应`ONOS_ROOT/tools/package/etc`)
 ```conf
 # Root logger
 log4j.rootLogger=DEBUG, out, logstash,syslog, sift, osgi:*
@@ -61,16 +64,16 @@ log4j.appender.logstash.port=5044
 log4j.appender.logstash.remoteHost=10.190.23.244  
 ```
 
-## filebeat输出到elk
-### filebeat Dockerfile
-Dockerfile
-```yaml
+### filebeat输出到elk
+>Dockerfile
+
+```docker
 From prima/filebeat
 ADD filebeat.yml /filebeat.yml
 RUN chmod go-w /filebeat.yml
 ```
+>filebeat.yml
 
-### filebeat.yml
 ```yaml
 filebeat:
     prospectors:
@@ -82,7 +85,8 @@ output:
         hosts: ["10.190.23.244:9200"]
 ```
 
-### docker-compose
+>docker-compose.yml
+
 ```yaml
 version: '2'  
 services:  
@@ -102,7 +106,9 @@ volumes:
 
 ```
 
-## nexus3搭建docker私服
+## nexus3
+>docker-compose.yml
+
 ```yaml
 version: '2'
 networks:
@@ -126,12 +132,13 @@ volumes:
   nexus-data: {}
 ```
 
-
-## 下载onosproject/onos镜像
+## ONOS
+下载`onosproject/onos`镜像
+```
 docker pull onosproject/onos
-将onos代码打包（onos-package）tar.gz 格式
-解压，进入目录编写Dockerfile
-```dockerfile
+```
+自定义Dockerfile
+```
 FROM java:8-jre-alpine
 MAINTAINER wanlay
 
@@ -150,8 +157,10 @@ WORKDIR /root/onos
 
 CMD ["./bin/onos-service"]
 ```
-## 制作docker镜像
+制作docker镜像
+```
 sudo docker build -t wanlay/cbb .
+```
 下载onos-form-cluster
 ```bash
 wget https://raw.githubusercontent.com/opennetworkinglab/onos/master/tools/package/bin/onos-form-cluster 
@@ -159,29 +168,28 @@ wget https://raw.githubusercontent.com/opennetworkinglab/onos/master/tools/packa
 chmod u+x onos-form-cluster
 ```
 将下面代码加入.bashrc
-```sh
+```bash
 docker-ip() {
   sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
 }
 ```
-## 运行onos镜像
+运行onos镜像
 ```
 sudo docker run  -t -d --name cbb1 wanlay/cbb
 ```
 将多个onos实例形成集群
-```sh
+```bash
 ./onos-form-cluster -u onos -p rocks `docker-ip cbb1` `docker-ip cbb2` `docker-ip cbb3`
 ```
 ssh连接到onos命令行
-```sh
+```bash
 ssh -p 8101 onos@`docker-ip cbb1`  
 #密码是rocks
 ```
 
-## 在 ubuntu 上安装 rancher
-### 安装docker和docker-compose
-参考[install.md](install.md)
-### 通过docker-compose安装rancher-server和mysql
+## rancher
+>docker-compose
+
 ```yaml
 version: '2'
 services:
@@ -213,19 +221,14 @@ services:
       - db-name=rancher
       - advertise-address=10.190.23.245   
 ```   
-### 运行
-`docker-compose up -d`
+!>添加主机时，agent所在的主机的docker版本要与server端的一样
 
-
-### tips
-添加主机时，agent所在的主机的docker版本要与server端的一样
-
-## 创建集群
+## portainer
+创建集群
 ```
 docker swarm init --advertise-addr 10.190.23.241
 ```
-
-## 运行 portainer
+运行portainer
 ```
 docker service create \
 --name portainer \
@@ -237,9 +240,9 @@ portainer/portainer \
 ```
 
 
-## sonarqube 的安装
+## sonarqube
+>docker-compose.yml
 
-docker-compose.yml
 ```yaml
 version: "2"
 
@@ -274,11 +277,10 @@ volumes:
   sonarqube_volume:
   pg_sonarqube_volume:
 ```
+>配置LADP
 
-## 配置LADP
-sonarqube 界面上安装LDAP插件 ，或者把插件拷贝到{sonarqube_volume}/extensions/plugins
-
-添加以下字段到{sonarqube_volume}/conf/sonar.properties
+sonarqube 界面上安装LDAP插件 ，或者把插件拷贝到`{sonarqube_volume}/extensions/plugins`  
+添加以下字段到`{sonarqube_volume}/conf/sonar.properties`
 ```conf
 # LDAP configuration
 # General Configuration

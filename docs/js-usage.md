@@ -1,5 +1,70 @@
-#关于js的一些用法
+# 关于js的一些用法
+## 一个js中引用另一个js
+```javascript
+document.write("<script language='javascript' src='one.js'></script>");
+```
+## 点击空白,清空弹框
+```javascript
+$(document).click(
+    function (event) {
+        var _con = $("#vlanInput");
+        if (!_con.is(event.target) &&
+            (_con.has(event.target).length === 0)) {
+            $('#vlanInput').popover('hide');
+        }
+    });
+```
 
+## 测试websocket
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Testing websockets</title>
+</head>
+<body>
+   <div>
+      <input type="submit" value="Start" onclick="start()" />
+   </div>
+   <div id="messages"></div>
+   <script type="text/javascript">
+  //测试websocket是否连通							 
+      var webSocket = new WebSocket("ws://onos:rocks@10.190.23.196:8181/restconf/streams/stream/connection-notification");
+
+      webSocket.onerror = function(event) {
+         onError(event)
+      };
+
+      webSocket.onopen = function(event) {
+         onOpen(event)
+      };
+
+      webSocket.onmessage = function(event) {
+         onMessage(event)
+      };
+
+      function onMessage(event) {
+         document.getElementById('messages').innerHTML 
+            += '<br />' + event.data;
+      }
+
+      function onOpen(event) {
+         document.getElementById('messages').innerHTML 
+            = 'Connection established';
+      }
+
+      function onError(event) {
+         alert(event.data);
+      }
+
+      function start() {
+         webSocket.send('hello');
+         return false;
+      }
+   </script>
+</body>
+</html>
+```
 ## eclpise中js的格式
 ```xml
 <!-- javascript_format.xml为eclipse中js代码格式化的配置文件 -->
@@ -270,71 +335,4 @@
 <setting id="org.eclipse.wst.jsdt.core.formatter.insert_space_after_colon_in_assert" value="insert"/>
 </profile>
 </profiles>
-```
-
-## 一个js中引用另一个js
-```javascript
-document.write("<script language='javascript' src='one.js'></script>");
-```
-## 点击空白,清空弹框
-```javascript
-$(document).click(
-    function (event) {
-        var _con = $("#vlanInput");
-        if (!_con.is(event.target) &&
-            (_con.has(event.target).length === 0)) {
-            $('#vlanInput').popover('hide');
-        }
-    });
-```
-
-## 测试websocket
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Testing websockets</title>
-</head>
-<body>
-   <div>
-      <input type="submit" value="Start" onclick="start()" />
-   </div>
-   <div id="messages"></div>
-   <script type="text/javascript">
-  //测试websocket是否连通							 
-      var webSocket = new WebSocket("ws://onos:rocks@10.190.23.196:8181/restconf/streams/stream/connection-notification");
-
-      webSocket.onerror = function(event) {
-         onError(event)
-      };
-
-      webSocket.onopen = function(event) {
-         onOpen(event)
-      };
-
-      webSocket.onmessage = function(event) {
-         onMessage(event)
-      };
-
-      function onMessage(event) {
-         document.getElementById('messages').innerHTML 
-            += '<br />' + event.data;
-      }
-
-      function onOpen(event) {
-         document.getElementById('messages').innerHTML 
-            = 'Connection established';
-      }
-
-      function onError(event) {
-         alert(event.data);
-      }
-
-      function start() {
-         webSocket.send('hello');
-         return false;
-      }
-   </script>
-</body>
-</html>
 ```

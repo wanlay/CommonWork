@@ -1,15 +1,16 @@
 ## server端
 ### 安装
-```
+```bash
 sudo apt-get update
 sudo apt-get install -y nfs-common nfs-kernel-server
 ```
 ### 配置
-```
+```bash
 echo /home *(rw,sync,no_root_squash) >> /etc/exports
 ```
 
-参数说明
+>参数说明  
+
 ```
 /home   ：共享的目录
 *       ：指定哪些用户可以访问

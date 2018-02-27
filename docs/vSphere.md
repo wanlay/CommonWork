@@ -21,11 +21,11 @@ https://hostname:9443/vsphere-client/?locale=en_US 即可将本来是中文的�
  无法打开磁盘 scsi0:0: 磁盘类型 不受支持或无效。请确保磁盘已导入
 解决方法：
 ssh连接到ESX主机
-```
+```bash
 vmkfstools -i <HostedVirtualDisk>  <ESXVirtualDisk>
 # 比如
 cd /vmfs/volumes/51dc3538-bbdf69dc-6e61-782bcb765b0f/zenoss_core-4.2.5-1998-x86_64/
 vmkfstools -i zenoss_core-4.2.5-1998-x86_64.vmdk  zenoss_core-4.2.5-1998-x86_64-new.vmdk -d thin
 # zenoss_core-4.2.5-1998-x86_64-new.vmdk就是转换后的磁盘名字。  -d选项为：使用精简置备模式。节省空间。
-#旧文件可以删除。
+# 旧文件可以删除。
 ```

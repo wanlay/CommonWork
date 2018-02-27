@@ -1,4 +1,6 @@
-## cgitrc
+## cgitrc实例
+>cgitrc
+
 ```
 :man source:   cgit
 :man manual:   cgit

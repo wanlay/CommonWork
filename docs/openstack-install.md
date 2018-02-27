@@ -1,10 +1,7 @@
 # 与openstack有关的一些问题
-## devstack的local.conf
-[文件](file/local.conf)
-
 ## 问题
 
-```sh
+```bash
 #问题
 avoid ENOSPC:
 #解决
@@ -13,7 +10,7 @@ sysctl --system
 ```
 ## devtsack
 local.conf
-```conf
+```bash
 [[local|localrc]]
 # Define images to be automatically downloaded during the DevStack built process.
 DOWNLOAD_DEFAULT_IMAGES=False

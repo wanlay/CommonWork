@@ -1,4 +1,6 @@
-## example conf
+## 配置文件实例
+>settings.xml
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- vi: set et smarttab sw=2 tabstop=2: -->

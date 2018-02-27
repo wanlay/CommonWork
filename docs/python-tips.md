@@ -6,9 +6,10 @@ os.popen(cmd)会吧执行的cmd的输出作为值返回。
 commands可以获得到返回值和输出
 ```
 ## pip
-pip.conf
+>~/.pip/pip.conf
+
 ```conf
-##pip的配置文件，默认pip从国外源下载，更改为国内源，文件放在~/.pip/pip.conf
+## pip的配置文件，默认pip从国外源下载，更改为国内源
 [global]
 index-url = https://mirrors.aliyun.com/pypi/simple/
 ```
