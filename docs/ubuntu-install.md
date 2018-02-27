@@ -1,3 +1,35 @@
+## 安装 ubuntu 16.04
+镜像地址：http://mirrors.opencas.org/ubuntu-releases/xenial/ubuntu-16.04.2-desktop-amd64.iso
+
+## 安装jdk8
+```sh
+sudo apt-get install software-properties-common -y && \
+sudo add-apt-repository ppa:webupd8team/java -y && \
+sudo apt-get update && \
+echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections && \
+sudo apt-get install oracle-java8-installer oracle-java8-set-default -y
+```
+
+## 安装qemu
+```sh
+sudo apt-get install qemu-kvm qemu virt-manager virt-viewer libvirt-bin
+```
+
+## 安装ping
+```
+sudo apt-get install inetutils-ping
+```
+
+## lvm 删除swap 分给 root
+```
+sudo swapoff -a
+
+lvm lvremove /dev/mapper/ubuntu--vg-swap
+#删除/etc/fstab中swap
+vgextend /dev/mapper/ubuntu--vg-root /dev/sda
+resize2fs /dev/mapper/ubuntu--vg-root
+```
+
 ## uget 安装  (下载工具)
 ```shell
 sudo add-apt-repository ppa:plushuang-tw/uget-stable

@@ -10,7 +10,6 @@ chmod +x /usr/local/bin/docker-compose
 ```
 
 ## 配置加速器
-<ul>
 
 ```shell   
 sudo curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://165eec11.m.daocloud.io
@@ -24,7 +23,6 @@ https://01cg06cz.mirror.aliyuncs.com
 https://docker.mirrors.ustc.edu.cn/
 ```
 
-</ul><ul>
 
 ```shell	
 sudo mkdir -p /etc/docker
@@ -36,7 +34,6 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
-</ul>
 
 ## dokcer-machine
 ```sh

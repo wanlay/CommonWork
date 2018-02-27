@@ -60,4 +60,44 @@ sudo rm -rf var/lib/docker/swarm/*
 sudo systemctl restart docker
 ```
 
+## pipework
+```sh
+cd /usr/src
+wget  -O pipework-master.zip https://codeload.github.com/jpetazzo/pipework/zip/master
+# 若没有unzip命令，安装 yum install -y unzip zip
+unzip pipework-master.zip 
+cp -p pipework-master/pipework /usr/local/bin/
+```
+pipework固定物理网段容器IP地址
+```sh
+pipework br0 cbb1 10.190.23.10/24@10.190.23.1
+```
+
+## docker pull 镜像时配置代理
+```shell
+mkdir -p /etc/systemd/system/docker.service.d
+
+/etc/systemd/system/docker.service.d/http-proxy.conf
+[Service]
+Environment="HTTP_PROXY=http://proxy.example.com:80/"
+
+/etc/systemd/system/docker.service.d/https-proxy.conf
+[Service]
+Environment="HTTPS_PROXY=https://proxy.example.com:443/"
+
+## 不走代理
+Environment="HTTP_PROXY=http://proxy.example.com:80/" "NO_PROXY=localhost,127.0.0.1,docker-registry.somecorporation.com"
+```
+
+重启服务
+```sh
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
+验证
+```
+systemctl show --property=Environment docker
+```
+
 

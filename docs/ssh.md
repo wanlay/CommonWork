@@ -9,7 +9,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.1.160
 
 先进行上面两步，然后修改`/etc/ssh/sshd_config`
 将配置前#号去掉
-```
+```sh
 #禁用root账户登录，如果是用root用户登录请开启
 PermitRootLogin yes
 

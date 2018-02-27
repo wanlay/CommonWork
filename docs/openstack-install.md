@@ -1,3 +1,19 @@
+# 与openstack有关的一些问题
+## devstack的local.conf
+[文件](file/local.conf)
+
+## 问题
+
+```sh
+#问题
+avoid ENOSPC:
+#解决
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+sysctl --system
+```
+## devtsack
+local.conf
+```conf
 [[local|localrc]]
 # Define images to be automatically downloaded during the DevStack built process.
 DOWNLOAD_DEFAULT_IMAGES=False
@@ -69,3 +85,4 @@ OFFLINE=True
 RECLONE=no
 
 /var/lib/openstack-dashboard
+```

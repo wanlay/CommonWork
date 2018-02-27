@@ -1,3 +1,5 @@
+## cgitrc
+```
 :man source:   cgit
 :man manual:   cgit
 
@@ -984,3 +986,4 @@ AUTHOR
 ------
 Lars Hjemli <hjemli@gmail.com>
 Jason A. Donenfeld <Jason@zx2c4.com>
+```

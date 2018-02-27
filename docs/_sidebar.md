@@ -1,7 +1,7 @@
 - Basic
   - [开始](README.md)
 - 安卓
-  - [刷机](android-刷机.md)
+  - [刷机](android.md)
 - 前端
   - [一些](js-usage.md)
   - [node](node.md)
@@ -9,5 +9,31 @@
   - [配置](ansible-config.md)
 - 安装
   - [ghost博客](ghost-install.md)
+  - [openstack](openstack-install.md)
+  - [nfs](nfs.md)
 - 系统
   - [centos](centos-config.md)
+  - [vSphere](vSphere.md)
+  - [CMD](CMD.md)
+  - [ssh](ssh.md)
+  - [ubuntu](ubuntu-install.md)
+  - [ubuntu问题](ubuntu-question.md)
+- python
+  - [tips](python-tips.md)
+- 源
+  - [gem](gem-source.md)
+- 配置
+  - [git](git-config.md)
+  - [mysql](mysql-config.md)
+  - [nginx](nginx-config.md)
+  - [tomcat](tomcat-config.md)
+  - [maven](maven-config.md)
+  - [cgit](cgit.md)
+- docker
+  - [安装](docker-install.md)
+  - [tips](docker-tips.md)
+  - [常用](container.md)
+- kubernetes
+  - [安装](k8s-install.md)
+  - [cmd](k8s-cmd.md)
+  - [常用](k8s-service.md)
