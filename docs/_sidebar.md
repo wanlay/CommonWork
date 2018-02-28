@@ -15,6 +15,7 @@
 - python
   - [tips](python-tips.md)
   - [selunium](python-selenium.md)
+  - [调试](python-debug.md)
 - 配置
   - [git](git-config.md)
   - [mysql](mysql-config.md)
@@ -32,5 +33,6 @@
   - [cmd](k8s-cmd.md)
   - [常用](k8s-service.md)
 - others
+  - [vscode操作](vscode.md)
   - [android刷机](android.md)
   - [js的用法](js-usage.md)
