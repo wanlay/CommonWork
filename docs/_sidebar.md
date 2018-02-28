@@ -14,6 +14,7 @@
   - [源](source.md)
 - python
   - [tips](python-tips.md)
+  - [selunium](python-selenium.md)
 - 配置
   - [git](git-config.md)
   - [mysql](mysql-config.md)
