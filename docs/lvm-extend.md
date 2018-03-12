@@ -89,7 +89,7 @@ PV /dev/sda5   VG ubuntu-vg       lvm2 [79.52 GiB / 0    free]
 PV /dev/sda3   VG ubuntu-vg       lvm2 [420.00 GiB / 420.00 GiB free]
 Total: 2 [499.52 GiB] / in use: 2 [499.52 GiB] / in no VG: 0 [0   ]
 ```
-!>将PV /dev/sda3划分到root LV下
+## 将PV /dev/sda3划分到root LV下
 
 >查看root LV的dev path
 
