@@ -13,6 +13,7 @@
   - [ubuntu问题](ubuntu-question.md)
   - [源](source.md)
   - [LVM扩容](lvm-extend.md)
+  - [shell常用](shell-usage.md)
 - python
   - [tips](python-tips.md)
   - [selunium](python-selenium.md)
