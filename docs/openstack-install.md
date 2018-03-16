@@ -81,5 +81,4 @@ OFFLINE=True
 # Reclone each time
 RECLONE=no
 
-/var/lib/openstack-dashboard
 ```

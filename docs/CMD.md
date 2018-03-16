@@ -27,6 +27,32 @@ ntpdate cn.ntp.org.cn   ##同步时间
 ```
 >国内ntp服务器IP：[58.220.207.226],[202.112.29.82],[202.108.6.95],[120.25.108.11],[182.92.12.11],[115.28.122.198]
 
+## 系统相关
+查看进程
+```bash
+ps -ef
+ps aux
+ps -ely
+```
+查看系统运行信息
+```bash
+uptime
+# 14:33:30 up 1 day, 22:13,  1 user,  load average: 1.24, 0.79, 0.74
+# 14:33:30 当前时间
+# up 1 day, 22:13 实际运行时间
+# 1 user 有几个用户登录
+# load average: 1.24, 0.79, 0.74 负载均衡
+```
+查看有几个用户登录,并在干什么
+```bash
+w
+```
+查看进程
+```bash
+top
+```
+
+
 ## 查看端口占用
 ```bash
 sudo fuser -n tcp 8182  ##查看端口
@@ -109,13 +135,6 @@ crontab
                     /usr/bin/killall -HUP syslogd
      endscript
 }
-```
-
-
-## 筛选
-输出第一行
-```
-cat test | awk '{print $1}'  
 ```
 
 ## 字符串替换

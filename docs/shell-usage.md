@@ -18,6 +18,7 @@ netstat -n | awk '{print $0,$2+$3}'
 输出`netstat -n`结果中，筛选出第二列等于2的
 ```bash
 netstat -n | awk '$2 == 2'
+ps -ef | awk '$1 == "ubuntu"'
 #不等于
 # netstat -n | awk '$2 != "2"'
 ```

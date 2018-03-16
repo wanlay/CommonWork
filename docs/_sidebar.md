@@ -18,6 +18,7 @@
   - [tips](python-tips.md)
   - [selunium](python-selenium.md)
   - [调试](python-debug.md)
+  - [正则](re.md)
 - 配置
   - [git](git-config.md)
   - [mysql](mysql-config.md)
@@ -38,3 +39,5 @@
   - [vscode操作](vscode.md)
   - [android刷机](android.md)
   - [js的用法](js-usage.md)
+  - [github-linux](github-linux.md)
+  - [github-docker](github-docker.md)
