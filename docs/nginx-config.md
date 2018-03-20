@@ -64,3 +64,25 @@ server {
     }
 }
 ```
+
+## 使用stream模块
+可以使用监听tcp、udp，默认tcp
+```bash
+# 修改`nginx.conf`，在末尾添加
+stream{
+    include /etc/nginx/conf.d/*.conf;
+}
+```
+```bash
+# example
+stream {                                                           
+  upstream cluster4 {                                                        
+  server 172.17.0.2:8101;                                        
+  server 172.17.0.3:8101;                   
+  }                                                                          
+  server {                                                       
+    listen       8101;                                             
+    proxy_pass cluster4; 
+  }                                             
+}
+```
