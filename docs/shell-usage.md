@@ -102,8 +102,9 @@ sed -n 4p myfile.txt
 > `   #   #  ##include server8101.conf;`  
 去除`#`号及其后include前的所有内容  
 `sed -i "s/#.*\(include server8101\)/\1/"`
-在匹配到server8101的行前加`#`号  
->`sed -i "/server8101/s/.*/#&/"`
+
+>在匹配到server8101的行前加`#`号  
+`sed -i "/server8101/s/.*/#&/"`
 
 
 ## find
