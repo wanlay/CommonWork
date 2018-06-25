@@ -96,3 +96,14 @@ genpac -p "SOCKS5 127.0.0.1:1080" --gfwlist-proxy="SOCKS5 127.0.0.1:1080" --gfwl
 ```
 genpac -p "PROXY 127.0.0.1:1080" --gfwlist-proxy="PROXY 127.0.0.1:1080" --gfwlist-url=https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt --output="autoproxy.pac"
 ```
+
+## nodejs
+安装
+```sh
+v=8   # set to 4, 5, 6, ... as needed
+curl -sL https://deb.nodesource.com/setup_$v.x | sudo -E bash -
+```
+```sh
+sudo apt-get install -y nodejs
+```
+[npm 源修改](source.md)

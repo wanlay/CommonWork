@@ -46,3 +46,10 @@ LoginGraceTime 120
 PermitRootLogin yes  #yes
 StrictModes yes
 ```
+
+## centos在docker设置ssh
+dockerfile中需包含
+```
+RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key  
+RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
+```
