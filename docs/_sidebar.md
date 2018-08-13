@@ -36,6 +36,7 @@
   - [cmd](k8s-cmd.md)
   - [常用](k8s-service.md)
 - others
+  - [windows](windows.md)
   - [vscode操作](vscode.md)
   - [android刷机](android.md)
   - [js的用法](js-usage.md)
