@@ -56,7 +56,7 @@ top
 ## 查看端口占用
 ```bash
 sudo fuser -n tcp 8182  ##查看端口
-##或者
+##或者 windows
 netstat -aon|findstr "8080"
 ```
 ## 查看服务

@@ -20,11 +20,13 @@ curl -sL https://deb.nodesource.com/setup | bash -
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash  
 ```
 
-[更换源](source.md ':include')
-
 ```bash 
 # 列出本机node版本
 nvm ls  
 # 安装
 nvm install 4.2
 ```
+
+::: tip
+[更换源](/others/source.md#npm)
+:::

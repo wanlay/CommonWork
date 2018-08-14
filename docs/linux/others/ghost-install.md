@@ -1,20 +1,9 @@
-# 安装ghsot
+# ghsot安装
 !>基于Centos
 ## 安装nginx
-
->添加源  
->vim /etc/yum.repo.d/nginx.repo
-
-```conf
-[nginx]
-name=nginx repo
-baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
-gpgcheck=0
-enabled=1
-
-# 安装
-yum install nginx 
-```
+::: tip
+[nginx 安装](/others/nginx.md#安装)
+:::
 ### 配置nginx
 >vim /etc/nginx/conf.d/ghost.conf
 
@@ -30,29 +19,9 @@ server {
 }
 ```
 ## 安装Node.js
-```bash
-curl -sL https://rpm.nodesource.com/setup | bash -
-curl -sL https://deb.nodesource.com/setup | bash -
-```
->通过nvm安装nodejs
-
-```bash
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash  
-```
->更换源  
->.bashrc中添加
-
-```bash
-export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
-```
-```bash
-# 使文件生效
-source .bashrc  
-# 列出本机node版本
-nvm ls  
-# 安装
-nvm install 4.2
-```
+::: tip
+[centos 安装 nodejs](/linux/others/software-install.md#centos)
+:::
 
 ## 安装 ghost
 ```bash

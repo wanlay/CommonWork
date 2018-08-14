@@ -124,7 +124,7 @@ module.exports = {
                             "/others/js-usage.md",
                             "/others/maven-config.md",
                             "/others/mysql-config.md",
-                            "/others/nginx-config.md",
+                            "/others/nginx.md",
                             "/others/openstack-install.md",
                             "/others/re.md",
                             "/others/source.md",

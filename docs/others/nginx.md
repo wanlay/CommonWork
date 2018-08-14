@@ -1,4 +1,20 @@
 # nginx
+## 安装
+### centos
+添加源  
+vim /etc/yum.repo.d/nginx.repo
+
+```conf
+[nginx]
+name=nginx repo
+baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
+gpgcheck=0
+enabled=1
+```
+``` bash
+# 安装
+yum install nginx 
+```
 ## onos集群的nginx配置  
 >http下添加或/etc/nginx/conf.d/onos.conf
 
