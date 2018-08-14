@@ -12,7 +12,8 @@ sudo: unable to resolve host username...
 ```
 !>问题二
 
-appstreamcli
+# 问题
+## appstreamcli
 ```bash
 Error in `appstreamcli': double free or corruption (fasttop)
 ```

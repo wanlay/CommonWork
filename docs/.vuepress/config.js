@@ -17,6 +17,7 @@ module.exports = {
         docsDir: "docs",
         editLinks: true,
         sidebarDepth: 3,
+        lastUpdated: '上次更新',
         locales: {
             "/": {
                 editLinkText: "在 GitHub 上编辑此页",
@@ -48,11 +49,11 @@ module.exports = {
                             children: [
                                 "/linux/others/ssh.md",
                                 "/linux/others/network-config.md",
-                                "/linux/others/ansible-config.md",
+                                "/linux/others/ansible.md",
                                 "/linux/others/cgit.md",
                                 "/linux/others/CMD.md",
                                 "/linux/others/ghost-install.md",
-                                "/linux/others/git-config.md",
+                                "/linux/others/git.md",
                                 "/linux/others/github-linux.md",
                                 "/linux/others/lvm-extend.md",
                                 "/linux/others/nfs.md",
@@ -127,7 +128,7 @@ module.exports = {
                             "/others/openstack-install.md",
                             "/others/re.md",
                             "/others/source.md",
-                            "/others/tomcat-config.md",
+                            "/others/tomcat.md",
 
                         ]
                     }]

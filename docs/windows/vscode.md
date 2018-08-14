@@ -1,3 +1,4 @@
+# vscode
 vscode常用操作
 ## 配置同步
 1. 安装插件 `Settings Sync`  

@@ -1,4 +1,4 @@
-# linux利用lvm扩展硬盘容量
+# lvm扩展硬盘容量
 ## 查看硬盘系统分区状态
 ```bash
 # fdisk -l 

@@ -1,4 +1,4 @@
-# 关于js的一些用法
+# js常用
 ## 一个js中引用另一个js
 ```javascript
 document.write("<script language='javascript' src='one.js'></script>");

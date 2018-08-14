@@ -1,3 +1,4 @@
+# nginx
 ## onos集群的nginx配置  
 >http下添加或/etc/nginx/conf.d/onos.conf
 

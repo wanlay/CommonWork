@@ -1,3 +1,4 @@
+# vSphere
 ## 开启复制粘贴 
 以 root 用户身份登录到 ESX/ESXi 主机。
 创建 `/etc/vmware/config` 文件的备份。

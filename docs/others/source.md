@@ -1,4 +1,4 @@
-# 各种源的设置
+# 源设置
 ## gem(ruby)
 ```bash
 gem source -r https://rubygems.org/
