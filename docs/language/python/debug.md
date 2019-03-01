@@ -11,8 +11,10 @@
     "python.pythonPath": "C:/Users/wanlay/.virtualenvs/flaskVue-zFTujpNl/Scripts/python.exe",
 }
 ```
-!>其中`python.venvPath`是虚拟环境所在的目录  
+::: tip
+其中`python.venvPath`是虚拟环境所在的目录  
 可通过`pipenv  --venv`查询
+:::
 
 `ctrl + shift + p`弹出命令面板，选择解析器`select interpreter`
 

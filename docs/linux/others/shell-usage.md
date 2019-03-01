@@ -7,8 +7,10 @@ if(($tmp < 2));then
 if [ $temp -lt 2 ] ;then
 ```
 ## awk
-!> NR,表示awk开始执行程序后所读取的数据行数  
-   FNR,与NR功用类似,不同的是awk每打开一个新文件,FNR便从0重新累计
+::: tip
+NR,表示awk开始执行程序后所读取的数据行数  
+FNR,与NR功用类似,不同的是awk每打开一个新文件,FNR便从0重新累计
+:::
 
 输出`netstat -n`结果的第2 、6、1列
 ```bash

@@ -221,7 +221,9 @@ services:
       - db-name=rancher
       - advertise-address=10.190.23.245   
 ```   
-!>添加主机时，agent所在的主机的docker版本要与server端的一样
+::: warning
+添加主机时，agent所在的主机的docker版本要与server端的一样
+:::
 
 ## portainer
 创建集群

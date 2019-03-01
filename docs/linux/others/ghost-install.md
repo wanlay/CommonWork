@@ -1,5 +1,7 @@
 # ghsot安装
-!>基于Centos
+::: warning
+基于Centos
+:::
 ## 安装nginx
 ::: tip
 [nginx 安装](/others/nginx.md#安装)
