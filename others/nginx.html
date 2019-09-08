@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>nginx | my-site</title>
+    <meta name="description" content="mysite">
+    <link rel="icon" href="/document/favicon.ico">
+    
+    <link rel="preload" href="/document/assets/css/styles.5eb717b1.css" as="style"><link rel="preload" href="/document/assets/js/app.5eb717b1.js" as="script"><link rel="preload" href="/document/assets/js/37.d20c65a1.js" as="script"><link rel="prefetch" href="/document/assets/js/1.ddf42c38.js"><link rel="prefetch" href="/document/assets/js/10.aca434fd.js"><link rel="prefetch" href="/document/assets/js/11.51601390.js"><link rel="prefetch" href="/document/assets/js/12.ad28f615.js"><link rel="prefetch" href="/document/assets/js/13.ac59c3d1.js"><link rel="prefetch" href="/document/assets/js/14.9a885008.js"><link rel="prefetch" href="/document/assets/js/15.f3655483.js"><link rel="prefetch" href="/document/assets/js/16.fd334191.js"><link rel="prefetch" href="/document/assets/js/17.7d7907a4.js"><link rel="prefetch" href="/document/assets/js/18.509fb0d1.js"><link rel="prefetch" href="/document/assets/js/19.849def23.js"><link rel="prefetch" href="/document/assets/js/2.68be4103.js"><link rel="prefetch" href="/document/assets/js/20.a45e76c6.js"><link rel="prefetch" href="/document/assets/js/21.6708f267.js"><link rel="prefetch" href="/document/assets/js/22.96d5c709.js"><link rel="prefetch" href="/document/assets/js/23.d43e6b88.js"><link rel="prefetch" href="/document/assets/js/24.6adcba5c.js"><link rel="prefetch" href="/document/assets/js/25.ebd3b924.js"><link rel="prefetch" href="/document/assets/js/26.4040aa58.js"><link rel="prefetch" href="/document/assets/js/27.50d8fb00.js"><link rel="prefetch" href="/document/assets/js/28.35f30a1a.js"><link rel="prefetch" href="/document/assets/js/29.86a6c76b.js"><link rel="prefetch" href="/document/assets/js/3.27896c98.js"><link rel="prefetch" href="/document/assets/js/30.a8f2d9ad.js"><link rel="prefetch" href="/document/assets/js/31.aa2e6fe8.js"><link rel="prefetch" href="/document/assets/js/32.c8127cc3.js"><link rel="prefetch" href="/document/assets/js/33.ab0c0d25.js"><link rel="prefetch" href="/document/assets/js/34.c54d6fbf.js"><link rel="prefetch" href="/document/assets/js/35.b062d65d.js"><link rel="prefetch" href="/document/assets/js/36.59518d28.js"><link rel="prefetch" href="/document/assets/js/38.fb2890b5.js"><link rel="prefetch" href="/document/assets/js/39.ff39d369.js"><link rel="prefetch" href="/document/assets/js/4.b23a15d0.js"><link rel="prefetch" href="/document/assets/js/40.51730ac4.js"><link rel="prefetch" href="/document/assets/js/41.4d899e1c.js"><link rel="prefetch" href="/document/assets/js/42.12d30c89.js"><link rel="prefetch" href="/document/assets/js/43.0542e2b0.js"><link rel="prefetch" href="/document/assets/js/44.e6ce2834.js"><link rel="prefetch" href="/document/assets/js/45.aa0bfb53.js"><link rel="prefetch" href="/document/assets/js/5.9aeab741.js"><link rel="prefetch" href="/document/assets/js/6.c2ff2458.js"><link rel="prefetch" href="/document/assets/js/7.ac6af82a.js"><link rel="prefetch" href="/document/assets/js/8.d108ed4a.js"><link rel="prefetch" href="/document/assets/js/9.6d42ccf6.js">
+    <link rel="stylesheet" href="/document/assets/css/styles.5eb717b1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/document/" class="home-link router-link-active"><!----><span class="site-name">
+      my-site
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/document/linux/" class="nav-link">linux</a></div><div class="nav-item"><a href="/document/docker/" class="nav-link">docker</a></div><div class="nav-item"><a href="/document/language/" class="nav-link">语言</a></div><div class="nav-item"><a href="/document/windows/" class="nav-link">windows</a></div><div class="nav-item"><a href="/document/others/" class="nav-link router-link-active">其他</a></div><a href="https://github.com/wanlay/document" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/document/linux/" class="nav-link">linux</a></div><div class="nav-item"><a href="/document/docker/" class="nav-link">docker</a></div><div class="nav-item"><a href="/document/language/" class="nav-link">语言</a></div><div class="nav-item"><a href="/document/windows/" class="nav-link">windows</a></div><div class="nav-item"><a href="/document/others/" class="nav-link router-link-active">其他</a></div><a href="https://github.com/wanlay/document" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav><ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span></span><!----></p><ul class="sidebar-group-items"><li><a href="/document/others/js-usage.html" class="sidebar-link">js常用</a></li><li><a href="/document/others/maven-config.html" class="sidebar-link">maven</a></li><li><a href="/document/others/mysql-config.html" class="sidebar-link">mysql</a></li><li><a href="/document/others/nginx.html" class="active sidebar-link">nginx</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/document/others/nginx.html#安装" class="sidebar-link">安装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/document/others/nginx.html#centos" class="sidebar-link">centos</a></li></ul></li><li class="sidebar-sub-header"><a href="/document/others/nginx.html#onos集群的nginx配置" class="sidebar-link">onos集群的nginx配置</a></li><li class="sidebar-sub-header"><a href="/document/others/nginx.html#文件服务器" class="sidebar-link">文件服务器</a></li><li class="sidebar-sub-header"><a href="/document/others/nginx.html#使用stream模块" class="sidebar-link">使用stream模块</a></li></ul></li><li><a href="/document/others/openstack-install.html" class="sidebar-link">openstack问题</a></li><li><a href="/document/others/re.html" class="sidebar-link">正则</a></li><li><a href="/document/others/source.html" class="sidebar-link">源设置</a></li><li><a href="/document/others/tomcat.html" class="sidebar-link">tomcat</a></li></ul></div></li></ul></div><div class="page"><div class="content"><h1 id="nginx"><a href="#nginx" aria-hidden="true" class="header-anchor">#</a> nginx</h1><h2 id="安装"><a href="#安装" aria-hidden="true" class="header-anchor">#</a> 安装</h2><h3 id="centos"><a href="#centos" aria-hidden="true" class="header-anchor">#</a> centos</h3><p>添加源<br>
+vim /etc/yum.repo.d/nginx.repo</p><div class="language-conf extra-class"><pre class="language-text"><code>[nginx]
+name=nginx repo
+baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
+gpgcheck=0
+enabled=1
+</code></pre></div><div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 安装</span>
+yum <span class="token function">install</span> nginx 
+</code></pre></div><h2 id="onos集群的nginx配置"><a href="#onos集群的nginx配置" aria-hidden="true" class="header-anchor">#</a> onos集群的nginx配置</h2><blockquote><p>http下添加或/etc/nginx/conf.d/onos.conf</p></blockquote><div class="language-nginx extra-class"><pre class="language-nginx"><code><span class="token keyword">upstream</span> myCluster <span class="token punctuation">{</span>
+    <span class="token keyword">server</span> <span class="token number">10.190</span><span class="token number">.23</span><span class="token number">.201</span><span class="token punctuation">:</span><span class="token number">8181</span><span class="token punctuation">;</span>      <span class="token comment">##集群</span>
+    <span class="token keyword">server</span> <span class="token number">10.190</span><span class="token number">.23</span><span class="token number">.202</span><span class="token punctuation">:</span><span class="token number">8181</span><span class="token punctuation">;</span>
+    <span class="token keyword">server</span> <span class="token number">10.190</span><span class="token number">.23</span><span class="token number">.203</span><span class="token punctuation">:</span><span class="token number">8181</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> 
+
+<span class="token keyword">server</span> <span class="token punctuation">{</span>
+    <span class="token keyword">listen</span> <span class="token number">8181</span><span class="token punctuation">;</span>
+    <span class="token keyword">server_name</span> <span class="token operator">~</span><span class="token operator">^</span>\\S<span class="token operator">*</span>restconf\\S<span class="token operator">*</span>$<span class="token punctuation">;</span>
+    <span class="token keyword">location</span> <span class="token operator">/</span> <span class="token punctuation">{</span>
+    <span class="token keyword">proxy_pass</span> <span class="token keyword">http</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>myCluster<span class="token punctuation">;</span>
+    <span class="token keyword">proxy_http_version</span> <span class="token number">1.1</span><span class="token punctuation">;</span>
+    <span class="token keyword">proxy_set_header</span> Upgrade <span class="token variable">$http_upgrade</span><span class="token punctuation">;</span>   <span class="token comment">##websocket</span>
+    <span class="token keyword">proxy_set_header</span> Connection <span class="token string">&quot;Upgrade&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="文件服务器"><a href="#文件服务器" aria-hidden="true" class="header-anchor">#</a> 文件服务器</h2><blockquote><p>/etc/nginx/conf.d/onos.conf</p></blockquote><div class="language-nginx extra-class"><pre class="language-nginx"><code><span class="token keyword">location</span> <span class="token operator">/</span> <span class="token punctuation">{</span>
+    <span class="token keyword">charset</span> utf<span class="token operator">-</span><span class="token number">8</span><span class="token punctuation">;</span> 
+    <span class="token keyword">root</span> <span class="token operator">/</span>home<span class="token operator">/</span>ubuntu<span class="token operator">/</span>share<span class="token punctuation">;</span>  <span class="token comment">#更改为代理的文件目录</span>
+    <span class="token keyword">autoindex</span> on<span class="token punctuation">;</span> 
+    <span class="token keyword">autoindex_exact_size</span> on<span class="token punctuation">;</span> 
+    <span class="token keyword">autoindex_localtime</span> on<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>有主题</strong><br>
+项目地址 https://github.com/sarim/nginx-vue-index</p><div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># bower安装</span>
+<span class="token function">npm</span> <span class="token function">install</span> -g bower
+</code></pre></div><p>将<code>/vueindex</code>换为<code>/.vueindex</code>包括目录名以及<code>index.html</code>中的所有</p><div class="language-nginx extra-class"><pre class="language-nginx"><code><span class="token keyword">server</span> <span class="token punctuation">{</span>
+    <span class="token keyword">listen</span>       <span class="token number">8080</span><span class="token punctuation">;</span>
+    <span class="token keyword">server_name</span>  localhost<span class="token punctuation">;</span>
+
+    <span class="token keyword">root</span> <span class="token operator">/</span>Volumes<span class="token operator">/</span>Storage<span class="token punctuation">;</span>
+    <span class="token keyword">index</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">autoindex</span> on<span class="token punctuation">;</span>
+    autoindex_format jsonp<span class="token punctuation">;</span>
+    <span class="token keyword">autoindex_localtime</span> on<span class="token punctuation">;</span>
+    
+    <span class="token keyword">set</span> <span class="token variable">$is_json</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$args</span> <span class="token operator">=</span> <span class="token string">&quot;j&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">set</span> <span class="token variable">$is_json</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">location</span> <span class="token operator">~</span> <span class="token operator">/</span>$ <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$is_json</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">rewrite</span> <span class="token operator">/</span> <span class="token operator">/</span><span class="token punctuation">.</span>vueindex<span class="token operator">/</span><span class="token keyword">index</span><span class="token punctuation">.</span>html <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="使用stream模块"><a href="#使用stream模块" aria-hidden="true" class="header-anchor">#</a> 使用stream模块</h2><p>可以使用监听tcp、udp，默认tcp</p><div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 修改`nginx.conf`，在末尾添加</span>
+stream<span class="token punctuation">{</span>
+    include /etc/nginx/conf.d/*.conf<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># example</span>
+stream <span class="token punctuation">{</span>                                                           
+  upstream cluster4 <span class="token punctuation">{</span>                                                        
+  server <span class="token number">172.17</span>.0.2:8101<span class="token punctuation">;</span>                                        
+  server <span class="token number">172.17</span>.0.3:8101<span class="token punctuation">;</span>                   
+  <span class="token punctuation">}</span>                                                                          
+  server <span class="token punctuation">{</span>                                                       
+    listen       <span class="token number">8101</span><span class="token punctuation">;</span>                                             
+    proxy_pass cluster4<span class="token punctuation">;</span> 
+  <span class="token punctuation">}</span>                                             
+<span class="token punctuation">}</span>
+</code></pre></div></div><div class="page-edit"><div class="edit-link"><a href="https://github.com/wanlay/document/edit/master/docs/others/nginx.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div><div class="last-updated"><span class="prefix">上次更新: </span><span class="time">8/14/2018, 1:57:53 AM</span></div></div><div class="page-nav"><p class="inner"><span class="prev">
+        ← <a href="/document/others/mysql-config.html" class="prev">
+          mysql
+        </a></span><span class="next"><a href="/document/others/openstack-install.html">
+          openstack问题
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/document/assets/js/app.5eb717b1.js" defer></script><script src="/document/assets/js/37.d20c65a1.js" defer></script>
+  </body>
+</html>
