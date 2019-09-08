@@ -95,7 +95,7 @@ Total: 2 [499.52 GiB] / in use: 2 [499.52 GiB] / in no VG: 0 [0   ]
 
 ```bash
 # lvdisplay
-lvextend /dev/ubuntu-vg/root /dev/sda3
+#lvextend /dev/ubuntu-vg/root /dev/sda3
 Size of logical volume ubuntu-vg/root changed from 75.52 GiB (19333 extents) to 495.52 GiB (126853 extents).
 Logical volume root successfully resized.
 ```
@@ -103,6 +103,7 @@ Logical volume root successfully resized.
 
 ```bash
 # resize2fs /dev/ubuntu-vg/root
+或者 #  btrfs filesystem resize max /
 resize2fs 1.42.13 (17-May-2015)
 Filesystem at /dev/ubuntu-vg/root is mounted on /; on-line resizing required
 old_desc_blocks = 5, new_desc_blocks = 31

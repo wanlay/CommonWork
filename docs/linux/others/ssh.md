@@ -1,4 +1,29 @@
+<!--
+ * @Description: 
+ * @Author: lei.wang
+ * @Date: 2019-09-08 11:18:10
+ * @LastEditTime: 2019-09-08 11:18:11
+ * @LastEditors: lei.wang
+ -->
 # ssh
+## 导入现有的公钥
+```bash
+echo 'IdentityFile ~/.ssh/libvirt' >> ~/.ssh/config
+chmod 664 ~/.ssh/config
+```
+## ssh config
+```bash
+Host 172.*
+IdentityFile ~/.ssh/libvirt
+ProxyCommand /bin/nc -X connect -x localhost:1080 %h %p
+TCPKeepAlive=yes
+ServerAliveInterval=15
+ServerAliveCountMax=6
+Compression=yes
+ControlMaster auto
+ControlPath /tmp/%r@%h:%p
+ControlPersist yes
+```
 ## ubuntu配置ssh免密钥
 ```bash
 # 本地生成公钥和私钥
